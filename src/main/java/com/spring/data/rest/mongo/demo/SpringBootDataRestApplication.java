@@ -39,7 +39,9 @@ public class SpringBootDataRestApplication implements CommandLineRunner {
 		LOGGER.info("-----------------------------------------------");
 		
 		if (null == emp) {
+			
 			List<Employee> employees = repo.saveAll(HelperUtil.getStaticEmployee());
+			
 			if (null != employees && employees.size() > 0) {
 				LOGGER.info("-----------------------------------------------");
 				LOGGER.info("Employee data saved in MongoDB");
